@@ -150,3 +150,22 @@ th {
     background-color: #1e88e5; /* Light blue for headers */
     color: #ffffff; /* White text for headers */
 }
+.checkbox-group {
+    background: #131212;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    max-height: 300px; /* Scrollable area */
+    overflow-y: auto;
+}
+.form-check {
+    margin-bottom: 8px;
+}
+
+.checkbox-group{
+    background-color: rgb(0, 0, 0);
+}
+
+.btn btn-primary{
+    background-color: black;
+}

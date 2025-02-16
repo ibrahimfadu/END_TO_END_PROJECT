@@ -130,3 +130,11 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 CSRF_TRUSTED_ORIGINS = [
     "https://end-to-end-project-lhrs.onrender.com",
 ]
+
+import os
+
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static"),  # Ensure your static files are placed here
+]
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")  # For production use

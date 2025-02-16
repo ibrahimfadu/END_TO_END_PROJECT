@@ -1,0 +1,53 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <title>Cutoff Predictor</title>
+</head>
+<body>
+    <style>
+        .checkbox-group {
+            border: solid 2px rgb(84, 73, 110);
+        }
+    </style>
+    <header>
+        <h1>Comparision Graph </h1>
+    </header>
+    <div class="container">
+        <form method="POST" action="{% url 'graph_result' %}">
+            {% csrf_token %}
+            
+            <label for="college">Select Colleges</label>
+            <div class="checkbox-group">
+                {% for college in colleges %} <br>
+                    <label>
+                        <input type="checkbox" name="college" value="{{ college }}"> {{ college }}
+                    </label>
+                {% endfor %}
+            </div>
+        
+            <label for="branch">Select Branch</label>
+            <select name="branch" id="branch" required>
+                <option value="">Select One</option>
+                {% for branch in branches %}
+                <option value="{{ branch }}">{{ branch }}</option>
+                {% endfor %}
+            </select>
+        
+            <label for="category">Select Category</label>
+            <select name="category" id="category" required>
+                <option value="">Select One</option>
+                {% for category in categories %}
+                <option value="{{ category }}">{{ category }}</option>
+                {% endfor %}
+            </select>
+            <input type="submit" value="Show">
+        </form>
+    </div>
+</body>
+</html>
+
+

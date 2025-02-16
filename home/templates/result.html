@@ -58,9 +58,8 @@
         </table>
 
         <div class="highlight">Predicted cutoff of 2025 is {{ predicted_cutoff }}</div>
-       
-        <form action="/" method="GET">
-            {% csrf_token %}  <!-- Correct CSRF tag -->
+
+        <form action="{% url 'home' %}" method="GET">
             <button class="return-btn" type="submit">Return</button>
         </form>
         

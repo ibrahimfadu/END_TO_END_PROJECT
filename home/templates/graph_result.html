@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Graph Results</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #07192b;
+        }
+        .container {
+            max-width: 900px;
+            margin-top: 40px;
+        }
+        .card {
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            padding: 15px;
+            background: white;
+        }
+        img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+        h2 {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2 class="text-center mb-4">Cutoff Analysis</h2>
+
+    <div class="card">
+        <h4 class="text-center">Cutoff Trend (Line Graph)</h4>
+        {% if line_chart %}
+            <img src="{{ line_chart }}" alt="Cutoff Trend Graph" class="img-fluid d-block mx-auto">
+        {% else %}
+            <p class="text-center text-muted">No data available for line graph.</p>
+        {% endif %}
+    </div>
+
+    <div class="card">
+        <h4 class="text-center">Cutoff Comparison (Bar Graph)</h4>
+        {% if bar_chart %}
+            <img src="{{ bar_chart }}" alt="Cutoff Bar Graph" class="img-fluid d-block mx-auto">
+        {% else %}
+            <p class="text-center text-muted">No data available for bar graph.</p>
+        {% endif %}
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
