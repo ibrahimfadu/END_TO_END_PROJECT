@@ -2,7 +2,7 @@ from django.shortcuts import render
 import pandas as pd
 import joblib
 df=pd.read_csv("data/comple_n1.csv")
-model=joblib.load("model.pkl")
+model=joblib.load("model_r.pkl")
 def home(request):
     if request.method == 'POST':
         college = request.POST.get('college')
