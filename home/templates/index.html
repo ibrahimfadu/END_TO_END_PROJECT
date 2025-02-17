@@ -8,12 +8,14 @@
     <title>Cutoff Predictor</title>
 </head>
 <body>
-    <header style="display: flex; justify-content: center; align-items: center; gap: 20px; padding: 10px 20px; position: relative;">
-        <h1 style="margin: 0; text-align: center; flex-grow: 1;">Cutoff Prediction</h1>
-        <a href="graph" class="btn" style="background-color: #4CAF50; color: white; padding: 12px 24px; font-size: 18px; border-radius: 8px; text-decoration: none; display: inline-block; transition: 0.3s; position: absolute; right: 20px;">
+    <header style="display: flex; justify-content: center; align-items: center; gap: 20px; padding: 10px 20px; position: relative; flex-wrap: wrap; text-align: center;">
+        <h1 style="margin: 0; flex-grow: 1;">Cutoff Prediction</h1>
+        <a href="graph" class="btn" 
+        style="background-color: #0A192F; color: white; padding: 12px 24px; font-size: 18px; border-radius: 8px; text-decoration: none; display: inline-block; transition: 0.3s;">
             View Graph
         </a>
     </header>
+    
     <div class="container">
         <form method="POST">
             {% csrf_token %}
